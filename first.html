@@ -8,5 +8,20 @@
 </head>
 <body>
     
+    <input type="number" id="num" placeholder="Enter the number">
+    <button onclick="square()">calculate</button>
+    <span id="span1"></span>
+     
+    <script>
+        
+        function square()
+        {
+            var number=document.getElementById("num").value;
+              var result=number * number;
+              document.getElementById("span1").innerHTML=result;
+        }
+       
+
+    </script>  
 </body>
 </html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Name: <input type="text" id="Name"></br><br>
+    About you: <textarea id="txtArea" cols="30" rows="10"></textarea><br><br>
+    Gender : <input type="radio" name="gender" id="r1" value="male">Male 
+             <input type="radio"  name="gender" id="r2" value="female">Female <br><br>
+    Hobbies: <input type="checkbox" name="hobbies" value="cricket">Cricket
+            <input type="checkbox"  name="hobbies" value="chess">Chess
+            <input type="checkbox" name="hobbies" value="football">Football <br><br>
+      <button onclick="display()">Display Info</button> <br><br>
+
+      Information <br>
+      <span id="myname"></span><br><br>
+      <span id="about"></span><br><br>
+      <span id="gen"></span><br><br>
+      <span id="hobby"></span>
+
+
+      
+      <script>
+         
+
+          function display()
+              {
+                  var myName=document.getElementById("Name").value;
+                  var aboutme=document.getElementById("txtArea").value;
+                  
+                  
+
+
+                  
+                  
+
+
+                  document.getElementById("myname").innerHTML="Name :" + myName;
+                  document.getElementById("about").innerHTML="About me :" + aboutme;
+
+                  if(document.getElementById("r1").checked)
+                  {
+                    document.getElementById("gen").innerHTML="Gender:" + document.getElementById("r1").value;
+                  }
+                  else
+                  {
+                    document.getElementById("gen").innerHTML="Gender:" + document.getElementById("r2").value;
+                  }
+
+
+                  
+                  var hob=document.getElementsByName("hobbies");
+                  var myHobbies=[];
+                  for(var i=0;i<hob.length;i++)
+                  {
+                      if(hob[i].checked)
+                      {
+                          myHobbies.push(hob[i].value);
+                      }
+                      document.getElementById("hobby").innerHTML="Hobbies :" + myHobbies;
+
+                  }
+                  
+                  
+
+                  
+              }
+          
+      </script>
+</body>      
+</html>
