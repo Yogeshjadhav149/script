@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="hello()">Alert</button>
+    <button onclick="msgConform()">confirm</button>
+    <button onclick="greet()">prompt</button>
+
+    <script>
+        function hello()
+        {
+            alert("Hello | good morning");
+        }
+
+        function msgConform()
+        {
+            let msg=confirm("click to conform ");
+            if(msg==true)
+            
+                document.write("your coformation  is success")
+            
+            else
+            document.write("your coformation  is not  success")
+        }
+
+        function greet()
+        {
+            let name=prompt("Enter name ")
+            document.write("Hello" + name);
+        }
+    </script>
+
+    
+</body>
+</html>
