@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        
+        let str="Web development,  web development is very best domain.";
+        // let str1="welcome to ";
+        // document.write("<p>" +str + "</p>");
+        // document.write("<p>" +str1 + "</p>");
+        // document.write("<p> charAt(4):" +str.charAt(4) + "</p>");
+        // document.write("<p> charCodeAt(6):" +str.charCodeAt(6) + "</p>");
+        // document.write("<P> concat:" +str1.concat(str) +"</p>");
+
+        // document.write("<p> Ends with :" + str.endsWith("development") + "<p>");
+        //     document.write("<p> Ends with :" + str.endsWith("developing") + "<p>");
+        
+        
+
+        //Replace Functionality
+        //document.write("<p>" + str + "</p>");
+        //str = str.replace("web", "website"); //Replaces only once
+        //document.write("<p>" + str + "</p>");
+        //str = str.replace(/web/g, "website"); //Replaces all occurences
+        //document.write("<p>" + str + "</p>");
+        // str = str.replace(/web/ig, "website"); //Replaces all occurences ignoring case
+        // document.write("<p>" + str + "</p>");
+
+        //Part of string
+
+        let mystring = "Akash";
+        let surname = "Prabhavalkar";
+
+        //document.write(mystring.length);
+        document.write("<p>" + mystring.slice(0, 2) + "</p>");
+        document.write("<p>" + mystring.substring(0, 2) + "</p>");
+        document.write("<p>" + mystring.substr(1, 2) + "</p>");
+    
+        //Joining multiple strings
+        // let name = mystring.concat(' ', surname);
+        // //let name = mystring + ' ' + surname;
+        // document.write(name);
+
+        // str = "      Akash    ";
+        // document.write("'" + str.trim() + "'");
+
+        // let no = "10";
+        // document.write("<p>" + no.padStart(10, 0) + "</p>");
+        // document.write(no.padEnd(10, 0));
+
+        // str = "Yogesh";
+        // document.write("Char at 2: " + str.charAt(2) + "<br />");
+        // document.write("Char code at 2: " + str.charCodeAt(2) + "<br />");
+        // document.write("Char at 2: " + str[2] + "<br />");
+
+        str = "Yogesh,akash,abhijit,rushi";
+        document.write(str);
+
+        let arr = str.split(",");
+        console.log(arr);
+    </script>
+    
+</body>
+</html>
