@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .message
+        {
+            color: aqua;
+            font-size: 20px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .myDiv
+        {
+           background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="mydiv"></div>
+    <div id="mydiv2">
+        <h1>hello welcome</h1>
+        <h2>here we learn about web development</h2>
+    </div>
+    <a href="https://www.google.co.in/" target="_blank" id="mylink">click here</a><br/>
+    <button onclick="set()">set value</button><br/>
+    <button onclick="get()">get value</button><br/>
+
+    <button onclick="add()">add element</button><br/>
+    <button onclick="remove()">remove element</button><br/>
+
+    <button onclick="addclass()">add class</button><br/>
+
+    <script>
+        function set()
+        {
+           
+           $("#mylink").attr("href","https://www.w3schools.com/jquery/default.asp");
+        }
+
+        function get()
+        {
+           document.write($("#mylink").attr("href"));
+        }
+        function add()
+        {
+            $("#mydiv").append("<h1>welcome to programming world</h1>");
+        }
+        function remove()
+        {
+            $("#mydiv").remove();
+        }
+
+        function addclass()
+        {
+            $("#mydiv2").addClass("message myDiv");
+        }
+    </script>
+</body>
+</html>
