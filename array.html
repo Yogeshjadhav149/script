@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr=["mango","banana","orange","watermelon","sugarcane"];
+        let arr2=["lion","tiger","elephent","black panther","jaguar"];
+
+        console.log(arr);
+        console.log(arr.toString());
+        console.log(arr.join("*"));
+        
+        arr.push("grapes");
+        console.log(arr);
+
+        arr.pop();
+        console.log(arr);
+
+        arr.shift();
+        console.log(arr);
+
+        arr.unshift("mango");
+        console.log(arr);
+
+        /* delete arr[4];
+         console.log(arr);
+       */
+       
+      
+        console.log(arr + "<br>");
+       console.log(arr.slice(0,2));
+
+       let arr3=arr.concat(arr2);
+       console.log(arr3);
+    //    console.log(arr.concat(arr2));
+
+    console.log(arr.constructor);
+
+    console.log(arr.copyWithin(3,0));
+
+    let animal=arr2.entries();
+    for(let i of animal)
+    {
+      console.log(i);
+    }
+//    every method return true value if all the element fulfill the condition
+    let ages=[15,17,18,22,25,30];
+    let x=ages.every(checkage);
+    function checkage(age)
+    {
+      return age>10;
+    }
+   console.log(x);
+
+
+//   fill method fill the given value at postion given
+   console.log(arr2.fill("zebra",1,3));
+
+   
+// filter method return the value who fulfil the codition
+   let adult=ages.filter(check)
+   function check(age)
+   {
+       return age>=18;
+   }
+    console.log(adult);
+    
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
