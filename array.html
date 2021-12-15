@@ -73,23 +73,32 @@
     let arrsort=arr2.sort();
     console.log(arrsort);
     
-    console.log(ages.reverse());
+    // console.log(ages.reverse());
 
         
+  let numbers=[11,12,13,14,15,16];
+  numbers.forEach(square);
+  
+
+  function square(value,index,array)
+  {
+   
+    array[index]=value * value;
+ }
+ console.log(numbers);
+    
+  
+    console.log(numbers);
+    let num=numbers.map(mul);
+    console.log(num.toString());
+
+    function mul(value,index,array)
+    {
+      return value * 2;
+    }
 
 
-
-
-
-
-
-
-
-
-
-
-
-    </script>
+   </script>
     
 </body>
 </html>
