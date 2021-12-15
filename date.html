@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const date=new Date();
+        console.log(date);
+
+        console.log(date.getFullYear());
+        console.log(date.getMonth()+1);  //get month return 0 to 11.to get correct add 1;
+        console.log(date.getDate());
+        console.log(date.getDay());
+        console.log(date.getHours());
+        console.log(date.getMinutes());
+        console.log(date.getSeconds());
+        console.log(date.toDateString());
+        console.log(date.toISOString());
+        console.log(date.toJSON());
+        console.log(date.toLocaleDateString());
+        console.log(date.toLocaleTimeString());
+        console.log(date.toLocaleString());
+        console.log(date.toTimeString());
+        console.log(date.toUTCString());
+
+        const birthdate=new Date("june 21 , 1985  02:20:00");
+        console.log(birthdate);
+        let years=birthdate.getUTCFullYear();
+        console.log(years);
+
+        const d=new Date();
+        d.setFullYear(2020);
+        console.log(d);
+    </script>
+    
+</body>
+</html>
