@@ -19,22 +19,26 @@
         {
             let email=document.getElementById("Email").value;
             let mobile=document.getElementById("Mobile").value;
-            let epat=(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
-            let mpat=(/^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$/);
-        
-           
+            let epat=new RegExp(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
+            let mpat=new RegExp(/^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$/);
+        let success = true;
+           //debugger;
+           document.getElementById("email_msg").innerHTML="";
+           document.getElementById("mobile_msg").innerHTML="";
             if(!epat.test(email)) 
             {
-                document.getElementById("email_msg").innerHTML="Email address is incorrect";
+                 document.getElementById("email_msg").innerHTML="Email address is incorrect";
+                 success = false;
+            }
                 if(!mpat.test(mobile))
-               {
-                document.getElementById("mobile_msg").innerHTML="Mobile no is incorrect";
+               {  
+                success = false;
+                 document.getElementById("mobile_msg").innerHTML="Mobile no is incorrect";
                }
-            }
-           else
-            {
-                document.getElementById("msg").innerHTML="Login Sucessful";
-            }
+               
+            if(success){
+            document.getElementById("msg").innerHTML="Login Sucessful"
+            }           
             
         }
     </script>
