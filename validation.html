@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="email" id="Email" placeholder="Email Id"><br/>
+    <input type="number" id="Mobile" placeholder="Mobile No"><br/>
+    <button onclick="validate()"> LOGIN</button><br/>
+    <span id="msg">
+
+    </span>
+
+    <script>
+        function validate()
+        {
+            let email=document.getElementById("Email").value;
+            let mobile=document.getElementById("Mobile").value;
+            let epat=(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
+            let mpat=(/^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$/);
+        
+
+            if(epat.test(email) && mpat.test(mobile))
+            {
+                document.getElementById("msg").innerHTML="login Sucessful";
+            }
+            else
+            {
+                document.getElementById("msg").innerHTML="please fill the correct";
+            }
+           
+
+        }
+    </script>
+</body>
+</html>
