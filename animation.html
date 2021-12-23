@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     
+        #div1
+        {
+            
+            width:300px ;
+        }
+
+        #div2
+        {
+            background-color: blueviolet;
+           
+        }
+        img
+        {
+            height: 200px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+<div style="display: flex;">
+    <div id="div1">
+        <img src="virat.jpeg" alt="virat" id="img">
+    </div>
+    <div id="div2">
+       
+    </div>
+</div>  
+    <button onclick="move()"><</button>
+    <button onclick="back()">></button>
+    
+    <script>
+        function move()
+        {
+            document.getElementById("div1").innerHTML= '<img src="virat.jpeg" alt="virat" id="img">'
+            document.getElementById("div2").innerHTML='';
+        }
+
+        function back()
+        {
+            document.getElementById("div2").innerHTML= '<img src="virat.jpeg" alt="virat" id="img">'
+            document.getElementById("div1").innerHTML='';
+        }
+    </script>
+</body>
+</html>

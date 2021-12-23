@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .info
+        {
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="greeting">hello good morning</h1>
+    <h2 class="info">welcome to the programming world</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit blanditiis ex ducimus deserunt nesciunt quasi repellat inventore! Accusantium nostrum facere minus voluptates? Neque fugiat id possimus quibusdam. Architecto, reprehenderit repudiandae?</p>
+    <p class="info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae nostrum ducimus, asperiores necessitatibus nihil commodi perferendis impedit, repellat quos labore sit natus tempora architecto. Amet quod deserunt expedita? Ipsum esse sed quos sint minus officia! Aliquid iure quasi reprehenderit laborum possimus?</p>
+
+     <input type="text" id="sub1"><br>
+     <input type="text" id="sub2"><br>
+
+    <button onclick="byID()">ID</button><br>
+    <button onclick="byTagName()">tagname</button><br>
+    <button onclick="byClassname()">classname</button><br>
+
+    <script>
+        function byID()
+        {
+            let num1=Number(document.getElementById("sub1").value);
+            let num2=Number(document.getElementById("sub2").value);
+             let res=num1+num2;
+
+
+            let greet=document.getElementById("greeting").innerHTML;
+            alert(greet);
+            console.log(res);
+        }
+
+        function byTagName()
+        {
+            let para=document.getElementsByTagName("p");
+            alert(para[0].innerHTML);
+           
+        }
+
+        function byClassname()
+        {
+            let para1=document.getElementsByClassName("info");
+            for(element of para1)
+            {
+                alert(element.innerHTML);
+            }
+            // alert(para1[0].innerHTML);
+            // alert(para1[1].innerHTML);
+           
+        }
+
+    </script>
+</body>
+</html>
