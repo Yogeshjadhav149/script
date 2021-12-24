@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height:100px;
+            width:100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="mydiv"> </div><br>
+    <input type="color" id="mycolor"><br>
+    <input type="range" id="size" min="100" max="1000"><br>
+    <button onclick="changeColor()">change color</button>
+
+    <script>
+        let changeColor = () =>{
+
+            let myDiv=document.getElementById("mydiv");
+            // myDiv.style.backgroundColor="green";
+            myDiv.style.backgroundColor=document.getElementById("mycolor").value;
+            myDiv.style.width=document.getElementById("size").value +"px";
+         
+            myDiv.style.height=document.getElementById("size").value +"px";
+
+
+        }
+    </script>
+</body>
+</html>
